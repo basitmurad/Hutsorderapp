@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.afaq.huts.fragments.ActiveOrdersFragment">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Your Order Will Be Deliver in 35 to 40 minutes "
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:padding="8dp"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:id="@+id/textCounter12"
+        />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:listitem="@layout/itemlist"
+    android:id="@+id/activeRecycler"
+
+
+    />
+
+</LinearLayout>
