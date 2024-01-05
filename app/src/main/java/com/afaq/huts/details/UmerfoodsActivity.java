@@ -93,20 +93,6 @@ public class UmerfoodsActivity extends AppCompatActivity {
         breakfastList.add(new BreakfastClass("Chi hot & Sour soup", "210", R.drawable.hotandsoursoup));
 
 
-//    w BreakfastClass("Chicken fried rice", "260", R.drawable.chickengriedrice));
-//        breakfastList.add(new BreakfastClass("Egg fried rice", "200", R.drawable.eggfiedrice));
-//        breakfastList.add(new BreakfastClass("Vegetable fried rice", "200", R.drawable.vegetables_rice));
-//        breakfastList.add(new BreakfastClass("Chi manchurian w rice", "400", R.drawable.manchurianrice));
-//        breakfastList.add(new BreakfastClass("Chi shashlik w rice", "400", R.drawable.shashlikrice));
-//        breakfastList.add(new BreakfastClass("Chi dry chilli w rice", "400", R.drawable.chillirice));
-//        breakfastList.add(new BreakfastClass("Chi hot & spice rice", "300", R.drawable.hotandsoursoup));
-//        breakfastList.add(new BreakfastClass("Chi chowmein", "250", R.drawable.chowin));
-//        breakfastList.add(new BreakfastClass("Vegetable chowmein", "200", R.drawable.chowin));
-//        breakfastList.add(new BreakfastClass("Chicken corn soup", "160", R.drawable.chicornsoup));
-//        breakfastList.add(new BreakfastClass("Chi hot & Sour soup", "210", R.drawable.hotandsoursoup));
-
-
-//asdasdasdasd
 
 
 
