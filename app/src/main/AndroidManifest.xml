@@ -18,7 +18,8 @@
         tools:targetApi="34">
         <activity
             android:name=".details.QuettaStudentCafeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Custom.Theme.Huts"/>
         <activity
             android:name=".details.ShinwariRestaurantActivity"
             android:exported="false"

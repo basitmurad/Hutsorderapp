@@ -45,11 +45,9 @@ public class MphilCanteenActivity extends AppCompatActivity {
 
         list.add(new BreakfastClass("Chicken Haleem" ,"150", R.drawable.haleem));
 
-        list.clear(); // Clear the existing list
 
         list.add(new BreakfastClass("Chicken Haleem", "150", R.drawable.haleem));
         list.add(new BreakfastClass("Chi steam roast", "250", R.drawable.roast));
-//        list.add(new BreakfastClass("Laziza", "180", R.drawable.la));
         list.add(new BreakfastClass("Aalu gosht", "200", R.drawable.aloghost));
         list.add(new BreakfastClass("Kaliji fri", "150", R.drawable.kalijifri));
         list.add(new BreakfastClass("Aalu special", "120", R.drawable.aluspecial));
@@ -70,7 +68,7 @@ public class MphilCanteenActivity extends AppCompatActivity {
         list.add(new BreakfastClass("Oreo shake", "120", R.drawable.oreashake));
         list.add(new BreakfastClass("Apple shake", "120", R.drawable.appleshake));
         list.add(new BreakfastClass("Grapes juice", "130", R.drawable.graphjuice));
-        list.add(new BreakfastClass("Fruit chat", "120", R.drawable.fruitchat));
+        list.add(new BreakfastClass("Fruit chat", "130", R.drawable.fruitchat));
         list.add(new BreakfastClass("Fruit chat special", "150", R.drawable.fruitchatspecial));
         list.add(new BreakfastClass("Masammi juice", "120", R.drawable.massamijuice));
         list.add(new BreakfastClass("Orange juice", "120", R.drawable.orangejuice));

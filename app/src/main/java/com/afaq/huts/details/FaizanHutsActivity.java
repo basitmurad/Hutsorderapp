@@ -56,7 +56,7 @@ public class FaizanHutsActivity extends AppCompatActivity {
         list.add(new BreakfastClass("Oreo shake", "120", R.drawable.oreashake));
         list.add(new BreakfastClass("Apple shake", "120", R.drawable.appleshake));
         list.add(new BreakfastClass("Grapes juice", "130", R.drawable.graphjuice));
-        list.add(new BreakfastClass("Fruit chat", "120", R.drawable.fruitchat));
+        list.add(new BreakfastClass("Fruit chat", "130", R.drawable.fruitchat));
         list.add(new BreakfastClass("Fruit chat special", "150", R.drawable.fruitchatspecial));
         list.add(new BreakfastClass("Masammi juice", "120", R.drawable.massamijuice));
         list.add(new BreakfastClass("Orange juice", "120", R.drawable.orangejuice));

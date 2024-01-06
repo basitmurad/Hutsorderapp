@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.afaq.huts.R;
 import com.afaq.huts.adapters.BreakFastAdapter;
 import com.afaq.huts.databinding.ActivityFoodieshutsBinding;
-import com.afaq.huts.databinding.ActivityJanbiryaniBinding;
 import com.afaq.huts.model.BreakfastClass;
 import com.afaq.huts.ui.CartsActivity;
 
@@ -35,7 +34,7 @@ public class FoodieshutsActivity extends AppCompatActivity {
 
         hutName= getIntent().getStringExtra("hutname");
 
-        binding.textView7.setText(hutName);
+//        binding.textView7.setText(hutName);
 
 
         breakfastList = new ArrayList<>();
@@ -54,6 +53,21 @@ public class FoodieshutsActivity extends AppCompatActivity {
         breakfastList.add(new BreakfastClass("Chicken karhai half", "800", R.drawable.chickenkhari)); // Add the corresponding drawable resource
         breakfastList.add(new BreakfastClass("Chicken karhai full", "1600", R.drawable.chickenkhari)); // Add the corresponding drawable resource
 
+        breakfastList.add(new BreakfastClass("Mineral water S", "60", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Mineral water L", "100", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Pepsi 200ml", "70", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1 litre", "160", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("coke 1 litre", "160", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Pepsi 500ml", "120", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1.5 litre", "190", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Coke 200ml", "70", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 500ml", "120", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 1.5 litre", "190", R.drawable.coke));
+
+        breakfastList.add(new BreakfastClass("Disposable glass", "5", R.drawable.glasss));
+
+
+
         filteredList.addAll(breakfastList);
 
         adapter = new BreakFastAdapter(this, filteredList, hutName);
@@ -61,30 +75,17 @@ public class FoodieshutsActivity extends AppCompatActivity {
         binding.MajRec.setAdapter(adapter);
         binding.MajRec.setLayoutManager(new LinearLayoutManager(this));
 
-        binding.btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        binding.btnback.setOnClickListener(v -> finish());
 
-        binding.btncart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(FoodieshutsActivity.this, CartsActivity.class));
-            }
-        });
+        binding.btncart.setOnClickListener(v -> startActivity(new Intent(FoodieshutsActivity.this, CartsActivity.class)));
         SearchView btnSearch = findViewById(R.id.btnSearch);
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Set focus on the SearchView
-                btnSearch.setIconified(false);
+        btnSearch.setOnClickListener(v -> {
+            // Set focus on the SearchView
+            btnSearch.setIconified(false);
 
-                // Show the keyboard
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.showSoftInput(btnSearch, InputMethodManager.SHOW_IMPLICIT);
-            }
+            // Show the keyboard
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(btnSearch, InputMethodManager.SHOW_IMPLICIT);
         });
 
         binding.btnSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

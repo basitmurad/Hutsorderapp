@@ -2,8 +2,13 @@ package com.afaq.huts.adapters;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +38,7 @@ import com.afaq.huts.details.MphilCanteenActivity;
 import com.afaq.huts.details.ParadiseHutsActivity;
 import com.afaq.huts.details.QuaCafeActivity;
 import com.afaq.huts.details.QuettaCafeActivity;
+import com.afaq.huts.details.QuettaStudentCafeActivity;
 import com.afaq.huts.details.ShabbirHutsActivity;
 import com.afaq.huts.details.ShahidlahorinaashtaActivity;
 import com.afaq.huts.details.ShinwariRestaurantActivity;
@@ -137,10 +143,6 @@ public class HutAdapter extends RecyclerView.Adapter<HutAdapter.MyHolder> {
                                 Intent intent = new Intent(context, ShabbirHutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Bio Hut")) {
-                                Intent intent = new Intent(context, BioHutsActivity.class);
-                                intent.putExtra("hutname", hutsClass.getHutsName());
-                                context.startActivity(intent);
                             } else if (hutName.equals("H9 Canteen")) {
                                 Intent intent = new Intent(context, HnineActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
@@ -149,35 +151,39 @@ public class HutAdapter extends RecyclerView.Adapter<HutAdapter.MyHolder> {
                                 Intent intent = new Intent(context, BioHutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Jan biryani")) {
+                            } else if (hutName.equals("Jan Biryani")) {
                                 Intent intent = new Intent(context, JanbiryaniActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Foodies huts")) {
+                            } else if (hutName.equals("Foodies Huts")) {
                                 Intent intent = new Intent(context, FoodieshutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Malakand huts")) {
+                            } else if (hutName.equals("Malakand Huts")) {
                                 Intent intent = new Intent(context, MalakandhutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Karachi huts")) {
+                            } else if (hutName.equals("Karachi Huts")) {
                                 Intent intent = new Intent(context, KarachihutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Umerfoods huts")) {
+                            } else if (hutName.equals("Quetta Student Cafe")) {
+                                Intent intent = new Intent(context, QuettaStudentCafeActivity.class);
+                                intent.putExtra("hutname", hutsClass.getHutsName());
+                                context.startActivity(intent);
+                            } else if (hutName.equals("Umer Foods Huts")) {
                                 Intent intent = new Intent(context, UmerfoodsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Quetta student cafe")) {
-                                Intent intent = new Intent(context, QuettaCafeActivity.class);
-                                intent.putExtra("hutname", hutsClass.getHutsName());
-                                context.startActivity(intent);
-                            } else if (hutName.equals("Shahid lahori naashta")) {
+                            } else if (hutName.equals("Uni Cafe")) {
+
                                 Intent intent = new Intent(context, ShahidlahorinaashtaActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
+
+
                             } else if (hutName.equals("Shinwari Restaurant")) {
+
                                 Intent intent = new Intent(context, ShinwariRestaurantActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
@@ -193,6 +199,18 @@ public class HutAdapter extends RecyclerView.Adapter<HutAdapter.MyHolder> {
                         @Override
                         public void onClick(View v) {
                             Toast.makeText(context, "Service time is closed for this hut.", Toast.LENGTH_SHORT).show();
+
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                            builder.setTitle("Service Closed")
+                                    .setMessage("Service time is closed for this hut.")
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            dialogInterface.dismiss();
+                                        }
+                                    });
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
                         }
                     });
                 }

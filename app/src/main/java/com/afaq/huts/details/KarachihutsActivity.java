@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -36,7 +35,7 @@ public class KarachihutsActivity extends AppCompatActivity {
 
         hutName= getIntent().getStringExtra("hutname");
 
-        binding.textView7.setText(hutName);
+//        binding.textView7.setText(hutName);
 
 
 
@@ -85,13 +84,31 @@ public class KarachihutsActivity extends AppCompatActivity {
         breakfastList.add(new BreakfastClass("Orange juice", "140", R.drawable.orangejuice));
         breakfastList.add(new BreakfastClass("Banana shake", "120", R.drawable.bananashake));
         breakfastList.add(new BreakfastClass("Oreo shake", "120", R.drawable.oreashake));
-        breakfastList.add(new BreakfastClass("Fruit chat", "150", R.drawable.fruitchat));
+        breakfastList.add(new BreakfastClass("Fruit chat", "130", R.drawable.fruitchat));
+        breakfastList.add(new BreakfastClass("Fruit chat special", "150", R.drawable.fruitchat));
         breakfastList.add(new BreakfastClass("Chaye", "60", R.drawable.chaye));
         breakfastList.add(new BreakfastClass("Paratha", "50", R.drawable.paratha));
         breakfastList.add(new BreakfastClass("Aalu paratha", "100", R.drawable.alooparatha));
         breakfastList.add(new BreakfastClass("Aalu cheese paratha", "150", R.drawable.alocheeseparatha));
         breakfastList.add(new BreakfastClass("Omlete", "50", R.drawable.omlete));
         breakfastList.add(new BreakfastClass("Andafri", "50", R.drawable.andafri));
+
+
+
+
+        breakfastList.add(new BreakfastClass("Mineral water S", "60", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Mineral water L", "100", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Pepsi 200ml", "70", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1 litre", "160", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("coke 1 litre", "160", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Pepsi 500ml", "120", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1.5 litre", "190", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Coke 200ml", "70", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 500ml", "120", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 1.5 litre", "190", R.drawable.coke));
+
+        breakfastList.add(new BreakfastClass("Disposable glass", "5", R.drawable.glasss));
+
 
 
         filteredList.addAll(breakfastList);
@@ -101,30 +118,17 @@ public class KarachihutsActivity extends AppCompatActivity {
         binding.MajRec.setAdapter(adapter);
         binding.MajRec.setLayoutManager(new LinearLayoutManager(this));
 
-        binding.btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        binding.btnback.setOnClickListener(v -> finish());
 
-        binding.btncart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(KarachihutsActivity.this, CartsActivity.class));
-            }
-        });
+        binding.btncart.setOnClickListener(v -> startActivity(new Intent(KarachihutsActivity.this, CartsActivity.class)));
         SearchView btnSearch = findViewById(R.id.btnSearch);
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Set focus on the SearchView
-                btnSearch.setIconified(false);
+        btnSearch.setOnClickListener(v -> {
+            // Set focus on the SearchView
+            btnSearch.setIconified(false);
 
-                // Show the keyboard
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.showSoftInput(btnSearch, InputMethodManager.SHOW_IMPLICIT);
-            }
+            // Show the keyboard
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(btnSearch, InputMethodManager.SHOW_IMPLICIT);
         });
 
         binding.btnSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

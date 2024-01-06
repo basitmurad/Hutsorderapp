@@ -97,7 +97,7 @@
                                     android:id="@+id/Breakfastdescription"
 
                                     style="@style/dishdescription_style"
-                                    android:text="Oder from your favorite\nrestaurants and home\nchefs"
+                                    android:text="Oder from your favorite restaurant "
 
                                     />
 
@@ -158,7 +158,7 @@
                                 <TextView
                                     android:id="@+id/lunchDesciptio"
                                     style="@style/dishdescription_style"
-                                    android:text="Oder from your favorite\nrestaurants and home\nchefs"
+                                    android:text="Oder from your favorite restaurant"
 
 
                                     />
@@ -221,7 +221,7 @@
                                 <TextView
                                     android:id="@+id/fastFoodDescription"
                                     style="@style/dishdescription_style"
-                                    android:text="Oder from your favorite\nrestaurants and home\nchefs"
+                                    android:text="Oder from your favorite restaurant"
 
                                     />
 

@@ -37,7 +37,7 @@ public class QuettaStudentCafeActivity extends AppCompatActivity {
 
         hutName = getIntent().getStringExtra("hutname");
 
-        binding.textView7.setText(hutName);
+//        binding.textView7.setText(hutName);
 
 
         breakfastList = new ArrayList<>();

@@ -42,7 +42,7 @@ private static final String CREATE_TABLE_QUERY = "CREATE TABLE " + TABLE_NAME + 
         COLUMN_HUT_NAME + " TEXT);";
 
     public DbHelper(@Nullable Context context   ) {
-        super(context, "user.db", null, 2);
+        super(context, "user.db", null, 1);
     }
 
 

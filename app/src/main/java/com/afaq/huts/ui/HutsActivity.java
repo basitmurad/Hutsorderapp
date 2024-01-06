@@ -22,9 +22,10 @@ import java.util.ArrayList;
 public class HutsActivity extends AppCompatActivity {
 
     private ActivityHutsBinding binding;
-    private ArrayList<HutsClass> list ;
+    private ArrayList<HutsClass> list;
     private ArrayList<HutsClass> filterList;
     private HutAdapter hutAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,35 +39,33 @@ public class HutsActivity extends AppCompatActivity {
         filterList.clear();
 
 
-        list.add(new HutsClass("Qau Cafe"     , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Majeed Hut"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Social Hut"   , "10:00  to 18:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Paradise Hut" , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Mphil Canteen", "10:00 to 23:00"      ,      R.drawable.farward));
-        list.add(new HutsClass("Quetta Cafe"  , "10:00  to 23:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Faizan Hut"   , "10:00  to 16:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Hikmat Hut"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Shabbir Hut"  , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Daniyal Hut"  , "10:00  to 16:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Bio Hut"      , "10:00  to 16:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("H9 Canteen"   , "16:00  to 23:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Jan biryani"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Foodies huts"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Malakand huts"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Karachi huts"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Umer foods huts"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Quetta student cafe"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Shinwari Restaurant"   , "10:00  to 22:00"     ,      R.drawable.farward));
-        list.add(new HutsClass("Shahid lahori naashta"   , "10:00  to 22:00"     ,      R.drawable.farward));
-
+        list.add(new HutsClass("Qau Cafe", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Majeed Hut", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Social Hut", "9:30  to 18:00", R.drawable.farward));
+        list.add(new HutsClass("Paradise Hut", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Mphil Canteen", "9:30 to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Quetta Cafe", "9:30  to 23:00", R.drawable.farward));
+        list.add(new HutsClass("Faizan Hut", "9:30  to 16:00", R.drawable.farward));
+        list.add(new HutsClass("Hikmat Hut", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Shabbir Hut", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Daniyal Hut", "9:30  to 16:00", R.drawable.farward));
+        list.add(new HutsClass("Bio Hut", "9:30  to 16:00", R.drawable.farward));
+        list.add(new HutsClass("H9 Canteen", "16:00  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Jan Biryani", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Foodies Huts", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Malakand Huts", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Karachi Huts", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Umer Foods Huts", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Quetta Student Cafe", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Shinwari Restaurant", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Uni Cafe", "9:30 to 22:00", R.drawable.farward));
 
 
         filterList.addAll(list);
-        hutAdapter =new HutAdapter(this, filterList);
+        hutAdapter = new HutAdapter(this, filterList);
 
         binding.hutRecycler.setAdapter(hutAdapter);
         binding.hutRecycler.setLayoutManager(new LinearLayoutManager(this));
-
 
 
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
