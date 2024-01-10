@@ -11,8 +11,8 @@ android {
         applicationId "com.afaq.huts"
         minSdk 22
         targetSdk 33
-        versionCode 9
-        versionName "1.8"
+        versionCode 12
+        versionName "1.11"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

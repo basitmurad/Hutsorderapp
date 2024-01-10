@@ -44,10 +44,10 @@ public class HutsActivity extends AppCompatActivity {
         list.add(new HutsClass("Social Hut", "9:30  to 18:00", R.drawable.farward));
         list.add(new HutsClass("Paradise Hut", "9:30  to 22:00", R.drawable.farward));
         list.add(new HutsClass("Mphil Canteen", "9:30 to 22:00", R.drawable.farward));
-        list.add(new HutsClass("Quetta Cafe", "9:30  to 23:00", R.drawable.farward));
+        list.add(new HutsClass("Quetta Cafe", "9:30  to 22:00", R.drawable.farward));
         list.add(new HutsClass("Faizan Hut", "9:30  to 16:00", R.drawable.farward));
         list.add(new HutsClass("Hikmat Hut", "9:30  to 22:00", R.drawable.farward));
-        list.add(new HutsClass("Shabbir Hut", "9:30  to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Uni Cafe", "9:30  to 22:00", R.drawable.farward));
         list.add(new HutsClass("Daniyal Hut", "9:30  to 16:00", R.drawable.farward));
         list.add(new HutsClass("Bio Hut", "9:30  to 16:00", R.drawable.farward));
         list.add(new HutsClass("H9 Canteen", "16:00  to 22:00", R.drawable.farward));
@@ -58,7 +58,7 @@ public class HutsActivity extends AppCompatActivity {
         list.add(new HutsClass("Umer Foods Huts", "9:30  to 22:00", R.drawable.farward));
         list.add(new HutsClass("Quetta Student Cafe", "9:30  to 22:00", R.drawable.farward));
         list.add(new HutsClass("Shinwari Restaurant", "9:30  to 22:00", R.drawable.farward));
-        list.add(new HutsClass("Uni Cafe", "9:30 to 22:00", R.drawable.farward));
+        list.add(new HutsClass("Shahid Huts", "9:30 to 22:00", R.drawable.farward));
 
 
         filterList.addAll(list);

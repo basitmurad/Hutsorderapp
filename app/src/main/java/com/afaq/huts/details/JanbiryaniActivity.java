@@ -52,7 +52,18 @@ public class JanbiryaniActivity extends AppCompatActivity {
         breakfastList.add(new BreakfastClass("Chi pulao S", "220", R.drawable.chipulao));
         breakfastList.add(new BreakfastClass("Chi biryani F", "300", R.drawable.chickenbiryani));
         breakfastList.add(new BreakfastClass("Chi pulao F", "300", R.drawable.chipulao));
+        breakfastList.add(new BreakfastClass("Mineral water S", "60", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Mineral water L", "100", R.drawable.water));
+        breakfastList.add(new BreakfastClass("Pepsi 200ml", "70", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1 litre", "160", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("coke 1 litre", "160", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Pepsi 500ml", "120", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Pepsi 1.5 litre", "190", R.drawable.pepsi));
+        breakfastList.add(new BreakfastClass("Coke 200ml", "70", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 500ml", "120", R.drawable.coke));
+        breakfastList.add(new BreakfastClass("Coke 1.5 litre", "190", R.drawable.coke));
 
+        breakfastList.add(new BreakfastClass("Disposable glass", "5", R.drawable.glasss));
 
         filteredList.addAll(breakfastList);
 

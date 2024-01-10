@@ -139,7 +139,7 @@ public class HutAdapter extends RecyclerView.Adapter<HutAdapter.MyHolder> {
                                 Intent intent = new Intent(context, HikmatHutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Shabbir Hut")) {
+                            } else if (hutName.equals("Uni Cafe")) {
                                 Intent intent = new Intent(context, ShabbirHutsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
@@ -175,7 +175,7 @@ public class HutAdapter extends RecyclerView.Adapter<HutAdapter.MyHolder> {
                                 Intent intent = new Intent(context, UmerfoodsActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
                                 context.startActivity(intent);
-                            } else if (hutName.equals("Uni Cafe")) {
+                            } else if (hutName.equals("Shahid Huts")) {
 
                                 Intent intent = new Intent(context, ShahidlahorinaashtaActivity.class);
                                 intent.putExtra("hutname", hutsClass.getHutsName());
